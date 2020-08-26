@@ -38,10 +38,12 @@ print(a)
 # swap
 c = 5
 d = 17
+print("before swap:")
 print(c, d)
 #
 t = d
 d = c
 c = t
+print("after swap:")
 print(c,d)
 #
