@@ -6,6 +6,11 @@ if a > 5:
 else:
     print('small')
 
+# java, c, c++, javascript(3항연산자)
+# print( a>5?'big':'small' )
+print('big' if a > 5 else 'small')
+
+
 # if ~ elif ~ else
 n = 0
 if n > 0:

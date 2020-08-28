@@ -4,7 +4,7 @@ s1 = input('입력> ')
 def reverse(s):
     t = ''
     for i in range(len(s)-1,-1,-1):
-        t = t + s[i]
+        t += s[i]
     return t
 
 print('결과> ' + reverse(s1))
