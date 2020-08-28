@@ -1,3 +1,4 @@
+
 # 한 줄 문자열
 s1 = ''
 str1 = 'Hello World'
@@ -69,11 +70,17 @@ print("===============포맷팅===============")
 
 print('name: %s, age: %d' % ('둘리', 10))
 
+# dict
+print("name: %(name)s, age: %(age)d" % {'name':'둘리', 'age':10})
+
 # format() 함수
 name = '마이콜'
 age = 30
 print('name: ' + format(name, 's') + ', age: ' + format(age, 'd'))
 
+#format() 객체 함수
+print("name : {0}, age: {1}".format(name,age))
+print("name: {n}, age: {a}".format_map({'n': name,'a': age}))
 print("=============== 객체함수 ===============")
 s8 = 'i like Python'
 print(s8.upper())
@@ -90,6 +97,79 @@ print(s9.find('Like'))
 print(s9.find('Like', 5))
 print(s9.find('JavaScript'))
 print(s9.rfind('Like'))
+print(s9.startswith('i Like', 2))
+print(s9.endswith('Also'))
+# index()는 발견하지 못하면 예외가 발생한다.
+try:
+    print(s9.index('Like'))
+    s9.rindex('JavaScript')
+
+except ValueError as ex:
+    pass
+    print('index()는 발견하지 못하면 예외가 발생한다.')
+    #예외
+    # 1. 로그를 남긴다.
+    # 2. 사용자한테 사과
+
+# 편집과 치환
+s10 = '     spam and ham'
+print('=================' + s10.strip() + '===============')
+print('=================' + s10.rstrip() + '===============')
+print('=================' + s10.lstrip() + '===============')
+
+s11 = '<><abc><><defg><>'
+print('=================' + s11.strip('<>') + '===============')
+
+s12 = 'Hello Java Java Java'
+print('=================' + s12.replace('Java','Python') + '===============')
+
+#정렬
+s13= 'King and Queen'
+print('---' + s13.center(30)+ '---')
+print('---' + s13.ljust(30)+ '---')
+print('---' + s13.rjust(30)+ '---')
+
+#분리
+s14 = 'spam and ham'
+t=s14.split(' and ')
+print(t, type(t))
+s15 = 'one:two:three:four'
+t=s15.split(':',2)
+print(t)
+t=s15.rsplit(':',2)
+print(t)
+
+lines = '''1st line
+2nd line
+3rd line
+4th line'''
+
+t = lines.split('\n')
+print(t)
+
+t = lines.splitlines()
+print(t)
+
+# 병합
+s16 = '&'.join(t)
+print(s16)
+
+# 판별
+print('1234'.isdigit())
+print('abcd'.isalpha())
+print('1234'.isalpha())
+print('abcd'.isdigit())
+print('abcd'.islower())
+print('abcd'.isupper())
+print(' '.isspace())
+print(''.isspace())
+print('\n'.isspace())
+print('\t'.isspace())
+
+# '0' 채우기
+number = 234
+print(str(number).zfill(5))
+
 
 # str 객체는 변경할 수 없다. (불변성, immutable)
 # s10 = 'hello'

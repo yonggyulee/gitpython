@@ -52,3 +52,14 @@ else:
     print("\n---------------정상 루프 종료-----------------")
 
 
+print("\n--------삼각형----------")
+for i in range(10):
+    for j in range(0,i+1):
+        print('*', end='')
+    else:
+        print()
+
+
+print("\n--------역삼각형----------")
+for i in range(10,0,-1):
+    print('*'*i)
